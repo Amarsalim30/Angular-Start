@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-user-item',
@@ -7,10 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './user-item.component.scss'
 })
 export class UserItemComponent {
-  name: string;
+  @Input() name!: string;
 
   constructor() {
-    this.name = 'Felipe';
   }
-
+  ngOnInit() {
+  }
 }
